@@ -1,13 +1,20 @@
-// JSX를 사용하려면 React를 import 해주어야 함
 // JSX : XML 형태의 코드를 Javascript로 변환. JSX 문법으로 작성하면 React.createElement를 사용하는 Javascript 형태로 변환시켜줌
+// JSX를 사용하려면 React를 import 해주어야 함
 // import를 사용해 다른 파일을 불러오는 것은 webpack 덕분
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+// component import
+
+// import logo from './logo.svg';
 import './App.css';
 
 // class 형태로 컴포넌트 생성
 // 이 방법 말고도 함수로 컴포넌트 생성하는 방법도 있음
 class App extends Component {
+	func=()=>{
+		this.props.getResult(this.state.text);
+	}
+
 	render() {
 		return (
 			// 모든 Component는 하나의 element로 감싸져있어야 함
@@ -21,9 +28,6 @@ class App extends Component {
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to React</h1>
 				</header>
-				<p className="App-intro">
-					To get started, edit <code>src/App.js</code> and save to reload.
-				</p>
 			</div>
 		);
 	}
