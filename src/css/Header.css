@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.header{
+    background:#f37421;
+    display:table;
+    table-layout:fixed;
+    width:1200px;
+    margin:0 auto;
+}
+
+.item{
+    text-align:center;
+    padding:1rem 0;
+    display:table-cell;
+    color:#555;
+    text-decoration:none;
+    font-size:1.1rem;
+}
+.item:hover{
+    background:red;
+}
+.item:active{
+    background:yellow;
+    color:green;
+}
+
+/* item 갯수와 상관없이 크기가 일정하게 display를 각각 table, table-cell로 지정 */
